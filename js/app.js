@@ -1,10 +1,9 @@
 ;jQdcc = jQuery.noConflict();
 jQdcc(document).ready(function($){
-	$('#clock').countdown('2015/09/18 18:00:00').on('update.countdown', function(event) {
-		var $this = $(this).html(event.strftime(''
-			+ '<span>%-d</span>'
-			+ '<span>%H</span>'
-			+ '<span>%M</span>'
-			+ '<span>%S</span>'));
-	});
+	var countdown = 1442574000 - ((new Date().getTime())/1000); // from: 09/18/2015 06:00 pm +0700
+	countdown = Math.max(1, countdown)
+
+    var clock = $('.clock').FlipClock(countdown, {
+        countdown: true
+    });
 })
