@@ -47,3 +47,23 @@ h6 {
 .pre-launch .flip-clock-divider.seconds .flip-clock-label { right: -99px; }
 .pre-launch .flip-clock-divider.minutes .flip-clock-label { right: -99px; }
 .pre-launch .flip-clock-divider.hours .flip-clock-label { right: -90px; }
+
+@media only screen and (max-width: 640px){
+	.clock {
+		transform: scale(0.75) translateX(0%);
+	}
+}
+
+@media only screen and (max-width: 360px){
+	.clock {
+		transform: scale(0.5) translateX(50%);
+        left: -50%;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	.clock {
+		transform: scale(0.5) translateX(25%);
+        left: -45%;
+	}
+}
